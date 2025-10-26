@@ -1,0 +1,234 @@
+[
+    {
+      "id": "jour1",
+      "date": "28/10/2025",
+      "title": "Arrivée à Milan",
+      "activities": [
+        {
+          "time": "7:17",
+          "title": "Départ en train pour Beauvais",
+          "details": "Métro arrive à 6:58 à Gare-Rue verte: 6:33 à Maryse, 6:49 à Europe, 6:54 à Joffre. \n Arrivée à 9:25 à Beauvais, \nPrendre le bus 6 de la gare départs: 9:44, 10:42, 11:35, \nArrivées aéroport: 10:05, 11:03, 11:56"
+        },
+        {
+          "time": "13:05",
+          "title": "Vol pour Bergame",
+          "details": "Arrivée prévue à 14h45.",
+          "image": "Images/jour1/bergame.jpeg"
+        },
+        {
+            "time": "15:10",
+            "title": "Bus pour Milan",
+            "details": "Arrivée prévue à 16:00."
+          },
+          {
+            "time": "20mn",
+            "title": "Milano Centrale au Airbnb",
+            "details": "Addresse: Via Niccolò Jommelli, 4620131 Milano MI, Italie.  \n M2 de Centrale FS à Piola ou \n81 de Stazione Centrale P.Za Duca D'aosta à Via Porpora Via Ampère",
+            "image": "Images/jour1/airbnb.avif"
+          },
+          {
+            "title": "Duomo",
+            "details": "A 23mn de l'appart en M1 ou 10mn en M3 de Milano Centrale. \n Max 30mn ici. \nOuvert 9h00 – 19h00.",
+            "image": "Images/jour1/duomo.jpeg"
+          },
+          {
+            "title": "Galleria Vittorio Emanuelle II",
+            "details": "A côté de Duomo. 15-20mn. \nOuvert 10h00 – 20h00.",
+            "image": "Images/jour1/galerie.jpeg"
+          },
+        {
+            "title": "Castello Sforzesco",
+            "details": "10mn à pied du Duomo. Prévoir 45mn pour visiter les cours et musées. \nOuvert 9h00 – 17h30.",
+            "image": "Images/jour1/sforzesco.jpeg"
+        },
+        {
+            "title": "Teatro alla Scala",
+            "details": "5mn du Duomo. Visite du musée et salle de spectacle, 30mn environ.\nMusée ouvert 9h30 – 17h30.",
+            "image": "Images/jour1/scala.jpeg"
+          },
+          {
+            "title": "Pinacoteca di Brera",
+            "details": "Quartier Brera, 15mn à pied du Duomo. Compter 1h pour la visite.\nOuvert 10h00 – 18h00.",
+            "image": "Images/jour1/brera.jpeg"
+          },
+          {
+            "title": "Santa Maria delle Grazie (Cène de Léonard de Vinci)",
+            "details": "15mn en tram depuis le Duomo. Réservation obligatoire pour voir le tableau.\nOuvert 8h15 – 19h00.",
+            "image": "Images/jour1/cene.jpeg"
+          }
+      ]
+    },
+    {
+      "id": "jour2",
+      "date": "29/10/2025",
+      "title": "Découverte du lac de Côme",
+      "activities": [
+        {
+          "time": "9:09",
+          "title": "Train pour Como",
+          "details": "Arrivée prévue 10:11. Passer 2 ou 3h à Varenna",
+          "image": "Images/jour2/como.jpeg"
+        },
+        {
+          "time": "12:15",
+          "title": "Prendre le ferry pour Bellagio.",
+          "details": "Arrivée prévue à 13h03. Passer 2 ou 3h.",
+          "image": "Images/jour2/bellagio.jpeg"
+        },
+        {
+            "time": "15:55",
+            "title": "Prendre le ferry pour Varenna. ",
+            "details": "Arrivée prévue à 16h30. Passer 2 ou 3h.",
+            "image": "Images/jour2/varena.jpeg"
+        },
+        {
+            "time": "18:35",
+            "title": "Prendre le train pour Milan.",
+            "details": "Arrivée prévue à 19h40"
+        },
+        {
+            "title": "Quartier Navigli",
+            "details": "20-25mn en métro ou 30mn en tram depuis le centre. Idéal pour apéro et balade le soir.\nMeilleur visite après 17h00 pour profiter des canaux.",
+            "image": "Images/jour1/navigli.jpeg"
+          },
+          {
+            "title": "Quartier Porta Nuova",
+            "details": "10-15mn à pied du Duomo. Gratte-ciels modernes, balade de 20-30mn.\nAccessible toute la journée.",
+            "image": "Images/jour1/portanuova.jpeg"
+          }
+
+      ]
+    },
+    {
+        "id": "jour3",
+        "date": "30/10/2025",
+        "title": "Arrivée à Florence",
+        "activities": [
+          {
+            "time": "8:00",
+            "title": "Départ en bus pour Florence",
+            "details": "Arrivée prévue à 11h15. \n Adresse: Via San Gallo, 78, 50129 Florence, Italy. \n 50mn en prenant le T1.3 puis bus 23",
+            "image": "Images/jour3/airbnb2.avif"
+          },
+          {
+            "time": "13:30",
+            "title": "Galerie des Offices",
+            "details": "Musée couvert pour commencer au sec. \nChef-d’œuvres de Botticelli, Léonard de Vinci et Michel-Ange.\nOuvert 8h15 – 18h50.",
+            "image": "Images/jour3/uffizi.jpeg"
+          },
+          {
+            "time": "16:30",
+            "title": "Cathédrale Santa Maria del Fiore et baptistère",
+            "details": "Visite de l’intérieur et du musée du Duomo.\nOuvert 9h – 17h.",
+            "image": "Images/jour3/duomo.avif"
+          },
+          {
+            "time": "18:30",
+            "title": "Palazzo Vecchio",
+            "details": "Visite intérieure du palais et des salles historiques.\nOuvert 9h – 19h.",
+            "image": "Images/jour3/palazzo_vecchio.jpeg"
+          },
+          {
+            "time": "20:00",
+            "title": "Dîner dans le centre",
+            "details": "Trattoria ou restaurant couvert près de Piazza della Signoria.",
+            "image": "Images/jour3/diner.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "jour4",
+        "date": "31/10/2025",
+        "title": "Art et histoire",
+        "activities": [
+          {
+            "time": "09:00",
+            "title": "Galerie de l’Académie",
+            "details": "Visite pour admirer le David de Michel-Ange.\nOuvert 8h15 – 18h50.",
+            "image": "Images/jour4/accademia.jpeg"
+          },
+          {
+            "time": "11:30",
+            "title": "San Lorenzo et Chapelle des Médicis",
+            "details": "Églises et chapelle richement décorée, parfait pour rester au sec.\nOuvert 10h – 17h.",
+            "image": "Images/jour4/sanlorenzo.jpeg"
+          },
+          {
+            "time": "13:00",
+            "title": "Déjeuner",
+            "details": "Café ou trattoria à proximité des musées.",
+            "image": "Images/jour4/dejeuner.jpeg"
+          },
+          {
+            "time": "14:00",
+            "title": "Palais Pitti et Galerie Palatine",
+            "details": "Palais couvert avec art et histoire.\nOuvert 8h15 – 18h50.",
+            "image": "Images/jour4/palitti.avif"
+          },
+          {
+            "time": "17:30",
+            "title": "Dîner dans Oltrarno",
+            "details": "Restaurant couvert avec spécialités florentines.",
+            "image": "Images/jour4/diner_oltrarno.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "jour5",
+        "date": "1/11/2025",
+        "title": "Balades et vues panoramiques",
+        "activities": [
+          {
+            "time": "10:00",
+            "title": "Départ en voiture",
+            "details": "On prend la route direction Annecy !",
+            "image": "jour1/voiture.jpg"
+          },
+          {
+            "time": "15:00",
+            "title": "Installation à l’hôtel",
+            "details": "Check-in à l’hôtel du Lac.",
+            "image": "jour1/hotel.jpg"
+          }
+        ]
+      },
+      {
+        "id": "jour6",
+        "date": "2/11/2025",
+        "title": "Road trip jusqu'à Milan",
+        "activities": [
+          {
+            "time": "10:00",
+            "title": "Départ en voiture",
+            "details": "On prend la route direction Annecy !",
+            "image": "jour1/voiture.jpg"
+          },
+          {
+            "time": "15:00",
+            "title": "Installation à l’hôtel",
+            "details": "Check-in à l’hôtel du Lac.",
+            "image": "jour1/hotel.jpg"
+          }
+        ]
+      },
+      {
+        "id": "jour7",
+        "date": "3/11/2025",
+        "title": "Retour à SER",
+        "activities": [
+          {
+            "time": "10:00",
+            "title": "Départ en voiture",
+            "details": "On prend la route direction Annecy !",
+            "image": "jour1/voiture.jpg"
+          },
+          {
+            "time": "15:00",
+            "title": "Installation à l’hôtel",
+            "details": "Check-in à l’hôtel du Lac.",
+            "image": "jour1/hotel.jpg"
+          }
+        ]
+      }
+  ]
+  

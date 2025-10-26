@@ -1,0 +1,28 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    text-align: center;
+  }
+
+  h1 {
+    background-color: #ffecd2;
+    padding: 30px;
+    margin: 0;
+  }
+
+.activite p {
+    white-space: pre-line;
+  }
+  
+  .activite img {
+    width: 60%;          /* ← change ici la taille globale */
+    max-width: 400px;    /* ← limite maximale pour éviter les trop grandes images */
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  /* centre l’image */
+  }
+  
