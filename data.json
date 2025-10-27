@@ -66,7 +66,7 @@
         {
           "time": "9:09",
           "title": "Train pour Como",
-          "details": "Arrivée prévue 10:11. Passer 2 ou 3h à Varenna",
+          "details": "Arrivée prévue 10:11. Passer 2 ou 3h à Como.",
           "image": "Images/jour2/como.jpeg"
         },
         {
@@ -178,18 +178,36 @@
         "date": "1/11/2025",
         "title": "Balades et vues panoramiques",
         "activities": [
-          {
-            "time": "10:00",
-            "title": "Départ en voiture",
-            "details": "On prend la route direction Annecy !",
-            "image": "jour1/voiture.jpg"
-          },
-          {
-            "time": "15:00",
-            "title": "Installation à l’hôtel",
-            "details": "Check-in à l’hôtel du Lac.",
-            "image": "jour1/hotel.jpg"
-          }
+            {
+                "time": "09:00",
+                "title": "Jardin de Boboli",
+                "details": "Balade dans le jardin et vue panoramique sur Florence.\nAccessible toute la journée.",
+                "image": "Images/jour5/boboli.jpeg"
+              },
+              {
+                "time": "11:00",
+                "title": "Piazzale Michelangelo",
+                "details": "Vue panoramique sur Florence. Accessible à pied ou en bus.",
+                "image": "Images/jour5/piazzale_michelangelo.jpeg"
+              },
+              {
+                "time": "12:30",
+                "title": "Déjeuner",
+                "details": "Dans le quartier Oltrarno ou centre.",
+                "image": "Images/jour5/dejeuner.jpeg"
+              },
+              {
+                "time": "14:00",
+                "title": "Balade dans Oltrarno",
+                "details": "Quartier d’artisans et boutiques locales.\nTemps libre selon envies.",
+                "image": "Images/jour5/oltrano.jpeg"
+              },
+              {
+                "time": "20:00",
+                "title": "Dîner et dernière promenade",
+                "details": "Dîner traditionnel florentin et balade nocturne sur le Ponte Vecchio.",
+                "image": "Images/jour5/diner.jpeg"
+              }
         ]
       },
       {
