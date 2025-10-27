@@ -212,40 +212,129 @@
       },
       {
         "id": "jour6",
-        "date": "2/11/2025",
-        "title": "Road trip jusqu'à Milan",
-        "activities": [
+        "date": "04/11/2025",
+        "title": "Road Trip Florence → Malpensa",
+        "options": [
           {
-            "time": "10:00",
-            "title": "Départ en voiture",
-            "details": "On prend la route direction Annecy !",
-            "image": "jour1/voiture.jpg"
+            "id": "option_bologne_parme",
+            "title": "Itinéraire 1 – Par Bologne et Parme",
+            "activities": [
+              {
+                "time": "14:30",
+                "title": "Départ de Florence",
+                "details": "Départ de Florence en voiture électrique, autonomie > 80%. Trajet sur autoroute A1 vers Bologne (environ 1h20).",
+                "image": "Images/jour6/itineraire1.png"
+              },
+              {
+                "time": "16:00",
+                "title": "Arrivée à Bologne – pause et recharge",
+                "details": "Recharge sur borne rapide (Enel X / Tesla) près du centre ou sur A1.\nBalade vers Piazza Maggiore ou café sous les arcades pendant 30-40 min.",
+                "image": "Images/jour6/bologne.webp"
+              },
+              {
+                "time": "18:00",
+                "title": "Route vers Parme",
+                "details": "Trajet d’environ 1h15. Possibilité d’un court arrêt sur l’aire de Modène Nord si besoin d’un boost rapide."
+              },
+              {
+                "time": "19:15",
+                "title": "Dîner à Parme + recharge",
+                "details": "Arrivée à Parme. Recharge lente ou rapide pendant le dîner.\nRestaurant typique : trattoria ou osteria locale autour de Piazza Garibaldi.",
+                "image": "Images/jour6/parme.jpeg"
+              },
+              {
+                "time": "21:30",
+                "title": "Route vers Milan",
+                "details": "Trajet d’environ 1h30. Possible recharge intermédiaire sur l’A1 (Aire de Fiorenzuola ou Piacenza Sud)."
+              },
+              {
+                "time": "23:00",
+                "title": "Arrivée à Milan",
+                "details": "Balade de nuit rapide dans le centre (Piazza Duomo, Navigli) ou café tardif.\nDernière recharge complète avant l’aéroport.",
+                "image": "Images/jour6/milan.jpeg"
+              },
+              {
+                "time": "01:00",
+                "title": "Route vers Malpensa",
+                "details": "Trajet Milan → Malpensa (~45 min). Arrivée entre 1h45 et 2h du matin.\nPréparer recharge finale sur le parking de l’aéroport si nécessaire.",
+                "image": "Images/jour6/malpensa.webp"
+              }
+            ]
           },
           {
-            "time": "15:00",
-            "title": "Installation à l’hôtel",
-            "details": "Check-in à l’hôtel du Lac.",
-            "image": "jour1/hotel.jpg"
+            "id": "option_pise_spezia",
+            "title": "Itinéraire 2 – Par Pise et La Spezia",
+            "activities": [
+              {
+                "time": "14:30",
+                "title": "Départ de Florence",
+                "details": "Départ en voiture électrique direction Pise (~1h20 de route). Batterie > 80%.",
+                "image": "Images/jour6/itineraire2.png"
+              },
+              {
+                "time": "16:00",
+                "title": "Arrivée à Pise – visite + recharge",
+                "details": "Recharge au parking de la Tour (borne Enel X / BeCharge). Balade à pied : Tour de Pise, Cathédrale, Piazza dei Miracoli.",
+                "image": "Images/jour6/pise.jpeg"
+              },
+              {
+                "time": "17:30",
+                "title": "Route vers La Spezia",
+                "details": "Trajet d’environ 1h15 via A12. Route panoramique, possibilité d’arrêt photo avant d’arriver."
+              },
+              {
+                "time": "18:45",
+                "title": "Dîner et recharge à La Spezia",
+                "details": "Recharge rapide à La Spezia Centro (Enel X ou BeCharge) pendant le dîner.\nRestaurant sur le port ou pizzeria locale.",
+                "image": "Images/jour6/spezia.jpeg"
+              },
+              {
+                "time": "21:00",
+                "title": "Route vers Milan (via Gênes)",
+                "details": "Trajet environ 3h15. Recharge intermédiaire à Serravalle Scrivia (~23h)."
+              },
+              {
+                "time": "00:30",
+                "title": "Arrivée à Milan",
+                "details": "Balade nocturne ou courte pause au centre (Duomo ou café 24h). Recharge rapide avant départ vers l’aéroport.",
+                "image": "Images/jour6/milan.jpeg"
+              },
+              {
+                "time": "01:30",
+                "title": "Route vers Malpensa",
+                "details": "Dernier trajet (~45 min). Arrivée prévue entre 2h et 2h15 du matin.\nRecharge finale sur borne aéroport avant de dormir.",
+                "image": "Images/jour6/malpensa.webp"
+              }
+            ]
           }
         ]
-      },
+      },      
       {
         "id": "jour7",
         "date": "3/11/2025",
         "title": "Retour à SER",
         "activities": [
           {
+            "time": "2:00",
+            "title": "Arrivée à Malpensa",
+            "details": "Laisser les voitures et échanges de t-shirts !!!!"
+          },
+          {
+            "time": "6:20",
+            "title": "Vol pour CDG",
+            "details": "Arrivée prévue à 7:55."
+          },
+          {
             "time": "10:00",
-            "title": "Départ en voiture",
-            "details": "On prend la route direction Annecy !",
-            "image": "jour1/voiture.jpg"
+            "title": "Bus pour Rouen, Champlain.",
+            "details": "Arrivée prévue à 12:40."
           },
           {
             "time": "15:00",
-            "title": "Installation à l’hôtel",
-            "details": "Check-in à l’hôtel du Lac.",
-            "image": "jour1/hotel.jpg"
+            "title": "Arrivée à l'INSA pour les cours de l'aprèm.",
+            "details": "Cours en t-shirts !!!!!!."
           }
+
         ]
       }
   ]
