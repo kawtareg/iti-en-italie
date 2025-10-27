@@ -10,12 +10,10 @@ fetch('data.json')
 
     const section = document.getElementById('activites');
 
-    // ---- Cas 1 : Jour classique sans options ----
     if (jour.activities) {
       afficherActivites(jour.activities, section);
     }
 
-    // ---- Cas 2 : Jour avec options (comme jour6) ----
     else if (jour.options) {
       const choixDiv = document.createElement('div');
       choixDiv.classList.add('choix-options');
@@ -26,7 +24,7 @@ fetch('data.json')
         btn.innerText = opt.title;
         btn.classList.add('btn-option');
         btn.addEventListener('click', () => {
-          section.innerHTML = ''; // nettoie l’ancien contenu
+          section.innerHTML = ''; 
           afficherActivites(opt.activities, section);
         });
         choixDiv.appendChild(btn);
@@ -36,7 +34,6 @@ fetch('data.json')
     }
   });
 
-// ---- Fonction utilitaire pour afficher une liste d’activités ----
 function afficherActivites(activities, container) {
   activities.forEach(act => {
     const div = document.createElement('div');

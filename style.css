@@ -1,40 +1,181 @@
+/* style.css (mis à jour pour 2 jours par ligne avec cases plus grandes) */
 
-h1, h4 {
-    text-align:center;
-}
-  
+/* Reset minimal */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    text-align: center;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #faf7f2;
+  color: #222;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 24px;
+}
+
+/* Variables */
+:root{
+  --accent: #d9744a;
+  --muted: #8b7d74;
+  --card-bg: #fffaf6;
+  --tab-bg: #fff;
+  --gap: 20px;
+}
+
+.hero-content{
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px;
+  color: #fff;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(20,20,20,0.15);
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28)),
+    url("images/italie.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(-0.6deg);
+}
+.hero-content::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(transparent 60%, rgba(255,255,255,0.03)),
+    linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  mix-blend-mode: overlay;
+}
+.hero-content::before{
+  content: "TIMBRE";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.92);
+  background: rgba(0,0,0,0.18);
+  padding: 6px 8px;
+  border-radius: 4px;
+  transform: rotate(-12deg);
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.hero-content h1{
+  font-size: 36px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+}
+.hero-content h2{
+  font-size: 15px;
+  color: rgba(255,255,255,0.95);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.hero-content p{
+  font-size: 14px;
+  color: rgba(255,255,255,0.92);
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.grille-jours{
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: var(--gap);
+  align-items: start;
+}
+
+.carte-jour{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 22px rgba(20,20,20,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  will-change: transform;
+  min-height: 160px; 
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.carte-jour h2{
+  margin: 0;
+  padding: 14px 16px;
+  font-size: 18px; 
+  font-weight: 800;
+  background: linear-gradient(90deg, rgba(217,116,74,0.12), rgba(217,116,74,0.06));
+  color: var(--accent);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  border-radius: 12px 12px 0 0;
+}
+
+.carte-jour p{
+  margin: 14px 16px 18px 16px;
+  color: #333;
+  font-size: 15px; 
+  line-height: 1.3;
+}
+
+.carte-jour:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 20px 44px rgba(20,20,20,0.14);
+  text-decoration: none;
+}
+.carte-jour:active{ transform: translateY(-3px); }
+
+.carte-jour.active{
+  border: 2px solid var(--accent);
+  box-shadow: 0 24px 48px rgba(217,116,74,0.12);
+}
+
+.carte-jour .badge{
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  box-shadow: 0 8px 16px rgba(217,116,74,0.12);
+}
+
+.carte-jour:focus{
+  outline: 3px solid rgba(217,116,74,0.18);
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px){
+  .grille-jours{
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 16px;
   }
-  
-  h1 {
-    background-color: #ffecd2;
-    padding: 30px;
-    margin: 0;
+  .carte-jour{ min-height: 150px; }
+  .carte-jour h2{ font-size: 16px; padding: 12px 14px; }
+  .carte-jour p{ font-size: 14px; margin: 12px 14px 16px 14px; }
+}
+
+@media (max-width: 620px){
+  .grille-jours{
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
-  
-  .grille-jours {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px;
-    padding: 40px;
-  }
-  
-  .carte-jour {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-decoration: none;
-    color: #333;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .carte-jour:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-  
+  .hero-content{ padding: 18px; min-height: 220px; transform: none; border-radius: 8px; }
+  .hero-content h1{ font-size: 22px; }
+  .carte-jour{ min-height: 130px; border-radius: 10px; }
+}

@@ -1,80 +1,235 @@
+/* day.css — harmonisation visuelle avec l'accueil (poste-card hero + onglets/cartes propres)
+   Placez images/postcard.jpg dans le bon dossier ou ajustez le chemin.
+   Utilise Poppins pour le texte mais reprend les éléments visuels de l'accueil.
+*/
+
+/* Charger la police Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --accent: #d9744a;
+  --muted: #8b7d74;
+  --bg: #faf7f2;
+  --card-bg: #fffaf6;
+  --soft: #ffecd2;
+  --gap: 20px;
+  --container-max: 1100px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    text-align: center;
-  }
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 28px 20px;
+  text-align: center;
+}
 
-  h1 {
-    background-color: #ffecd2;
-    padding: 30px;
-    margin: 0;
-  }
+/* Hero similaire à l'accueil : image "carte postale" couvrant le titre */
+.hero-content {
+  position: relative;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 28px 32px;
+  color: #fff;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(20,20,20,0.12);
+  overflow: hidden;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.30)),
+    url("images/postcard.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: rotate(-0.6deg);
+}
 
-.activite p {
-    white-space: pre-line;
-  }
-  
-  .activite img {
-    width: 60%;          /* ← change ici la taille globale */
-    max-width: 400px;    /* ← limite maximale pour éviter les trop grandes images */
-    border-radius: 12px;
-    margin-top: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;  /* centre l’image */
-  }
-  
-  .choix-options {
-    margin: 25px auto;
-    text-align: center;
-  }
-  
-  .choix-options h2 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: #444;
-  }
-  
-  /* --- Boutons pour les itinéraires --- */
-  .btn-option {
-    background-color: #ffe0b2;
-    border: none;
-    padding: 10px 18px;
-    margin: 8px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  .btn-option:hover {
-    background-color: #ffc46b;
-    transform: translateY(-2px);
-  }
-  
-  .btn-option.active {
-    background-color: #ffb74d;
-    color: white;
-    transform: scale(1.05);
-  }
-  
-  /* --- Adaptation mobile --- */
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 1.6rem;
-      padding: 20px;
-    }
-  
-    .activite {
-      margin: 15px;
-      padding: 15px;
-    }
-  
-    .activite img {
-      width: 90%;
-    }
-  }
+/* Subtle paper texture overlay */
+.hero-content::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(transparent 62%, rgba(255,255,255,0.02)),
+    linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  mix-blend-mode: overlay;
+}
+
+.hero-content::before{
+  content: "TIMBRE";
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.92);
+  background: rgba(0,0,0,0.18);
+  padding: 6px 8px;
+  border-radius: 4px;
+  transform: rotate(-12deg);
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.hero-content h1{
+  font-size: 34px;
+  line-height: 1.05;
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.45);
+  letter-spacing: -0.02em;
+}
+.hero-content h2{
+  font-size: 14px;
+  margin: 4px 0 0 0;
+  color: rgba(255,255,255,0.95);
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+.hero-content p{
+  margin-top: 8px;
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* Conteneur principal de la page jour (centre le contenu comme l'accueil) */
+.container-day {
+  max-width: var(--container-max);
+  margin: 22px auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 360px; /* contenu principal + colonne latérale */
+  gap: 24px;
+  align-items: start;
+  padding: 0;
+}
+
+/* Card principal contenant texte + image */
+.main-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(20,20,20,0.06);
+  text-align: left;
+}
+
+/* Titre secondaire et meta */
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.page-title h1 { font-size: 22px; margin: 0; color: #222; }
+.page-meta { color: var(--muted); font-size: 0.95rem; }
+
+/* Bloc activité (texte + image) */
+.activite {
+  margin-top: 6px;
+  color: #333;
+  font-size: 1rem;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+/* Image grande centrée dans le contenu principal */
+.activite img {
+  display: block;
+  width: 100%;
+  max-width: 820px;
+  height: auto;
+  border-radius: 12px;
+  margin: 18px auto 6px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Colonne latérale : mini-onglets / navigation / options */
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Mini-onglets ressemblant à l'accueil */
+.carte-jour {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 20px rgba(20,20,20,0.04);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.carte-jour:hover { transform: translateY(-6px); box-shadow: 0 18px 36px rgba(20,20,20,0.10); }
+.carte-jour h3 { margin: 0 0 6px 0; color: var(--accent); font-size: 15px; }
+.carte-jour p { margin: 0; color: #444; font-size: 0.95rem; }
+
+/* Liste d'options (boutons) */
+.choix-options {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 8px 22px rgba(20,20,20,0.04);
+  text-align: center;
+}
+.choix-options h2 { font-size: 1rem; margin-bottom: 10px; color: #444; }
+.btn-option {
+  background-color: #ffe0b2;
+  border: none;
+  padding: 10px 14px;
+  margin: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  display: inline-block;
+}
+.btn-option:hover { background-color: #ffc46b; transform: translateY(-3px); }
+.btn-option.active { background-color: #ffb74d; color: white; transform: scale(1.03); }
+
+/* Petite zone d'informations */
+.meta { color: #666; font-size: 0.95rem; margin-top: 8px; }
+
+/* Footer/navigations */
+.day-footer {
+  margin-top: 16px;
+  text-align: center;
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* Responsive: empilement sur petits écrans */
+@media (max-width: 980px) {
+  .container-day { grid-template-columns: 1fr; padding: 0 12px; }
+  .activite img { max-width: 100%; }
+  .hero-content { padding-left: 22px; padding-right: 22px; }
+  .main-card { padding: 16px; }
+  .sidebar { order: 2; }
+}
+
+/* Petits écrans */
+@media (max-width: 620px) {
+  body { padding: 16px; }
+  .hero-content { min-height: 200px; padding: 18px; border-radius: 10px; transform: none; }
+  .hero-content h1 { font-size: 22px; }
+  .container-day { margin-top: 14px; }
+  .btn-option { padding: 9px 12px; font-size: 0.92rem; }
+  .carte-jour { padding: 10px; }
+}
